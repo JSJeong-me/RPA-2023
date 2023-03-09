@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230309 19:21:33.857" rpa="true" schemaversion="3">
+<suite id="s1" name="Robot-1" source="C:\Users\oakyo\Documents\Robots\test21\robot-1">
+<suite id="s1-s1" name="Tasks" source="C:\Users\oakyo\Documents\Robots\test21\robot-1\tasks.robot">
+<test id="s1-s1-t1" name="온도" line="6">
+<kw name="현재기온">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://naver.com/</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20230309 19:21:34.994" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230309 19:21:35.000" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20230309 19:21:36.645" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230309 19:21:37.850" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20230309 19:21:37.850" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20230309 19:21:37.850" level="INFO">Opening url 'https://naver.com/'</msg>
+<status status="PASS" starttime="20230309 19:21:34.993" endtime="20230309 19:21:38.463"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//*[@id="query"]</arg>
+<arg>날씨</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230309 19:21:38.464" level="INFO">Typing text '날씨' into text field '//*[@id="query"]'.</msg>
+<status status="PASS" starttime="20230309 19:21:38.463" endtime="20230309 19:21:38.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230309 19:21:39.828" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230309 19:21:38.815" endtime="20230309 19:21:39.828"/>
+</kw>
+<kw name="Press Keys" library="RPA.Browser.Selenium">
+<arg>//*[@id="query"]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230309 19:21:39.829" level="INFO">Sending key(s) ('RETURN',) to //*[@id="query"] element.</msg>
+<msg timestamp="20230309 19:21:40.114" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230309 19:21:40.115" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230309 19:21:39.829" endtime="20230309 19:21:41.089"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230309 19:21:42.104" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230309 19:21:41.090" endtime="20230309 19:21:42.104"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${text}</var>
+<arg>//*[@id="main_pack"]/section[1]/div[1]/div[2]/div[1]/div[1]/div/div[2]/div/div[1]/div[1]/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230309 19:21:42.133" level="INFO">${text} = 현재 온도
+9.6°</msg>
+<status status="PASS" starttime="20230309 19:21:42.104" endtime="20230309 19:21:42.133"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230309 19:21:45.141" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230309 19:21:42.133" endtime="20230309 19:21:45.141"/>
+</kw>
+<status status="PASS" starttime="20230309 19:21:34.992" endtime="20230309 19:21:45.142"/>
+</kw>
+<status status="PASS" starttime="20230309 19:21:34.992" endtime="20230309 19:21:45.142"/>
+</test>
+<status status="PASS" starttime="20230309 19:21:33.918" endtime="20230309 19:21:45.142"/>
+</suite>
+<status status="PASS" starttime="20230309 19:21:33.899" endtime="20230309 19:21:45.143"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot-1">Robot-1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tasks">Robot-1.Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
