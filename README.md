@@ -1,5 +1,5 @@
 # RPA-2023
-InnerPeople RPA
+Robot Framework & RPA Framework 교안
 
 ### 수업 내용
 
