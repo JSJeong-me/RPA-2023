@@ -1,0 +1,9 @@
+{
+    "Linklogin": {
+        "screenshot": ".images\\linklogin-screenshot.png",
+        "source": "https://www.naver.com/",
+        "strategy": "css",
+        "type": "browser",
+        "value": ".link_login"
+    }
+}

@@ -1,0 +1,11 @@
+tasks:
+  "\uC6F9\uB85C\uADF8\uC778":
+    robotTaskName: "\uC6F9\uB85C\uADF8\uC778"
+condaConfigFile: conda.yaml
+ignoreFiles:
+- .gitignore
+artifactsDir: output
+PATH:
+- .
+PYTHONPATH:
+- .
