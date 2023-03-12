@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230309 22:25:45.368" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Users\oakyo\Documents\Robots\test23\tasks.robot">
+<test id="s1-t1" name="Playwright: Open a browser in headless mode" line="9">
+<kw name="New Page" library="RPA.Browser.Playwright">
+<arg>https://robotsparebinindustries.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230309 22:25:55.505" level="INFO">Successfully initialized new page object and opened url: https://robotsparebinindustries.com</msg>
+<msg timestamp="20230309 22:25:55.511" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230309 22:25:48.744" endtime="20230309 22:25:55.511"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230309 22:25:58.524" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230309 22:25:55.514" endtime="20230309 22:25:58.525"/>
+</kw>
+<kw name="Type Text" library="RPA.Browser.Playwright">
+<arg>//*[@id="username"]</arg>
+<arg>maria</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230309 22:25:58.528" level="INFO">Types the text 'maria' in the given field.</msg>
+<status status="PASS" starttime="20230309 22:25:58.527" endtime="20230309 22:25:58.651"/>
+</kw>
+<kw name="Type Secret" library="RPA.Browser.Playwright">
+<arg>//*[@id="password"]</arg>
+<arg>thoushallnotpass</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<msg timestamp="20230309 22:25:58.669" level="WARN">Direct assignment of values as 'secret' is deprecated. Use special variable syntax to resolve variable. Example $var instead of ${var}.</msg>
+<status status="PASS" starttime="20230309 22:25:58.653" endtime="20230309 22:25:58.798"/>
+</kw>
+<kw name="Click" library="RPA.Browser.Playwright">
+<arg>//*[@id="root"]/div/div/div/div[1]/form/button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230309 22:25:58.799" endtime="20230309 22:25:58.877"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230309 22:26:03.894" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230309 22:25:58.879" endtime="20230309 22:26:03.895"/>
+</kw>
+<status status="PASS" starttime="20230309 22:25:48.735" endtime="20230309 22:26:03.898"/>
+</test>
+<doc>Playwright template.</doc>
+<status status="PASS" starttime="20230309 22:25:45.383" endtime="20230309 22:26:03.984"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230309 22:25:58.669" level="WARN">Direct assignment of values as 'secret' is deprecated. Use special variable syntax to resolve variable. Example $var instead of ${var}.</msg>
+</errors>
+</robot>
