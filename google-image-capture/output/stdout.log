@@ -1,0 +1,10 @@
+==============================================================================
+Tasks :: Executes Google image search and stores the first result image.      
+==============================================================================
+Execute Google image search and store the first result image          | PASS |
+------------------------------------------------------------------------------
+Tasks :: Executes Google image search and stores the first result ... | PASS |
+1 task, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\oakyo\Documents\robots\test1\output\output.xml
+Log:     C:\Users\oakyo\Documents\robots\test1\output\log.html
