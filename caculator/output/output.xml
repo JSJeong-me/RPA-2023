@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230225 13:26:39.840" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="C:\Users\oakyo\Documents\robots\test6\tasks.robot">
+<test id="s1-t1" name="Open Calculator using run dialog" line="6">
+<kw name="Open Using Run Dialog" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>calc.exe</arg>
+<arg>계산기</arg>
+<doc>Open application using Windows run dialog.
+Window title name is required to get handle on the application.</doc>
+<msg timestamp="20230225 13:26:46.381" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:47.980" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:49.058" level="INFO">${result} = 1</msg>
+<status status="PASS" starttime="20230225 13:26:43.896" endtime="20230225 13:26:49.058"/>
+</kw>
+<kw name="Get Window Elements" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<doc>Get element information about all window dialog controls
+and their descendants.</doc>
+<msg timestamp="20230225 13:26:50.473" level="INFO">${result} = ([&lt;pywinauto.application.WindowSpecification object at 0x00000196373CE2B0&gt;, &lt;uiawrapper.UIAWrapper - '계산기', Dialog, 2563313500424193720&gt;, &lt;uia_controls.MenuWrapper - '시스템', Menu, -3827272664163964562&gt;...</msg>
+<status status="PASS" starttime="20230225 13:26:49.059" endtime="20230225 13:26:50.473"/>
+</kw>
+<kw name="Send Keys" library="RPA.Desktop.Windows">
+<arg>5*2=</arg>
+<doc>Send keys into active windows.</doc>
+<status status="PASS" starttime="20230225 13:26:50.473" endtime="20230225 13:26:50.715"/>
+</kw>
+<kw name="Get Element" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>partial name:표시는</arg>
+<doc>Get element by locator.</doc>
+<msg timestamp="20230225 13:26:50.717" level="INFO">Get element: partial name:표시는</msg>
+<msg timestamp="20230225 13:26:50.717" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:51.102" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:52.233" level="INFO">${result} = {'object': &lt;uia_controls.StaticWrapper - '표시는 10', Static, -3670057204259790549&gt;, 'legacy': {'ChildId': 0, 'DefaultAction': '누르기', 'Description': '', 'Help': '', 'KeyboardShortcut': '', 'Name': '표시는 1...</msg>
+<status status="PASS" starttime="20230225 13:26:50.716" endtime="20230225 13:26:52.234"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20230225 13:26:52.237" level="INFO">{'object': &lt;uia_controls.StaticWrapper - '표시는 10', Static, -3670057204259790549&gt;, 'legacy': {'ChildId': 0, 'DefaultAction': '누르기', 'Description': '', 'Help': '', 'KeyboardShortcut': '', 'Name': '표시는 10', 'Role': 41, 'State': 1048580, 'Value': ''}, 'automation_id': 'CalculatorResults', 'class_name': '', 'control_id': 'None', 'control_type': 'Text', 'enabled': 'True', 'handle': 'None', 'name': '표시는 10', 'parent': 'Group', 'process_id': '2656', 'rectangle': '(L2273, T456, R3329, B617)', 'rich_text': '표시는 10', 'runtime_id': '(42, 263146, 4, 1)', 'visible': 'True', 'control': &lt;uia_controls.StaticWrapper - '표시는 10', Static, -3670057204259790549&gt;}</msg>
+<status status="PASS" starttime="20230225 13:26:52.234" endtime="20230225 13:26:52.237"/>
+</kw>
+<kw name="Get Element Rich Text" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>id:CalculatorResults</arg>
+<doc>Get value of element `rich text` attribute.</doc>
+<msg timestamp="20230225 13:26:52.238" level="INFO">Get element: id:CalculatorResults</msg>
+<msg timestamp="20230225 13:26:52.238" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:52.667" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:53.726" level="INFO">${result} = 표시는 10</msg>
+<status status="PASS" starttime="20230225 13:26:52.237" endtime="20230225 13:26:53.726"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${result}</arg>
+<arg>표시는 10</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230225 13:26:53.727" endtime="20230225 13:26:53.727"/>
+</kw>
+<kw name="Get Element Rectangle" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>partial name:표시는</arg>
+<doc>Get value of element `rectangle` attribute.</doc>
+<msg timestamp="20230225 13:26:53.728" level="INFO">Get element: partial name:표시는</msg>
+<msg timestamp="20230225 13:26:53.728" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:54.114" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:55.115" level="INFO">${result} = (2273, 456, 3329, 617)</msg>
+<status status="PASS" starttime="20230225 13:26:53.728" endtime="20230225 13:26:55.115"/>
+</kw>
+<kw name="Is Element Visible" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>CalculatorResults</arg>
+<doc>Is element visible.</doc>
+<msg timestamp="20230225 13:26:55.115" level="INFO">Get element: CalculatorResults</msg>
+<msg timestamp="20230225 13:26:55.116" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:55.545" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:56.548" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20230225 13:26:55.115" endtime="20230225 13:26:56.548"/>
+</kw>
+<kw name="Is Element Enabled" library="RPA.Desktop.Windows">
+<var>${result}</var>
+<arg>partial name:표시는</arg>
+<doc>Is element enabled.</doc>
+<msg timestamp="20230225 13:26:56.549" level="INFO">Get element: partial name:표시는</msg>
+<msg timestamp="20230225 13:26:56.549" level="INFO">Open dialog: '계산기'</msg>
+<msg timestamp="20230225 13:26:57.019" level="INFO">Connect to application handle: 525244</msg>
+<msg timestamp="20230225 13:26:58.013" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20230225 13:26:56.548" endtime="20230225 13:26:58.013"/>
+</kw>
+<status status="PASS" starttime="20230225 13:26:43.895" endtime="20230225 13:26:58.014"/>
+</test>
+<kw name="Close All Applications" library="RPA.Desktop.Windows" type="TEARDOWN">
+<doc>Close all applications</doc>
+<msg timestamp="20230225 13:26:58.015" level="INFO">Closing all applications</msg>
+<msg timestamp="20230225 13:26:58.016" level="INFO">Quit application: 1 ({'app': &lt;pywinauto.application.Application object at 0x0000019637182040&gt;, 'id': 1, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기', 'executable': 'calc.exe', 'startkeyword': 'Open Using Run Dialog'})</msg>
+<msg timestamp="20230225 13:26:58.864" level="INFO">Quit by killing process id</msg>
+<msg timestamp="20230225 13:26:58.865" level="INFO">Quit application: 2 ({'app': &lt;pywinauto.application.Application object at 0x0000019637520C40&gt;, 'id': 2, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기'})</msg>
+<msg timestamp="20230225 13:26:59.623" level="INFO">Process pid '14512' did not exist anymore</msg>
+<msg timestamp="20230225 13:26:59.623" level="INFO">Quit application: 3 ({'app': &lt;pywinauto.application.Application object at 0x00000196373FA370&gt;, 'id': 3, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기'})</msg>
+<msg timestamp="20230225 13:27:00.319" level="INFO">Process pid '14512' did not exist anymore</msg>
+<msg timestamp="20230225 13:27:00.319" level="INFO">Quit application: 4 ({'app': &lt;pywinauto.application.Application object at 0x0000019635F9C820&gt;, 'id': 4, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기'})</msg>
+<msg timestamp="20230225 13:27:01.023" level="INFO">Process pid '14512' did not exist anymore</msg>
+<msg timestamp="20230225 13:27:01.023" level="INFO">Quit application: 5 ({'app': &lt;pywinauto.application.Application object at 0x00000196366C2EB0&gt;, 'id': 5, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기'})</msg>
+<msg timestamp="20230225 13:27:01.732" level="INFO">Process pid '14512' did not exist anymore</msg>
+<msg timestamp="20230225 13:27:01.732" level="INFO">Quit application: 6 ({'app': &lt;pywinauto.application.Application object at 0x000001963754F910&gt;, 'id': 6, 'dialog': False, 'process_id': 14512, 'handle': 525244, 'dispatched': False, 'windowtitle': '계산기'})</msg>
+<msg timestamp="20230225 13:27:02.432" level="INFO">Process pid '14512' did not exist anymore</msg>
+<status status="PASS" starttime="20230225 13:26:58.015" endtime="20230225 13:27:02.432"/>
+</kw>
+<status status="PASS" starttime="20230225 13:26:39.844" endtime="20230225 13:27:02.432"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230225 13:26:43.882" level="WARN">c:\ProgramData\robocorp\ht\cbe51ae_5a1fac3_9fcd2534\lib\site-packages\RPA\Desktop\Windows.py:216: FutureWarning: `RPA.Desktop.Windows` got deprecated and will be no longer maintained, please use `RPA.Windows` instead (https://robocorp.com/docs/libraries/rpa-framework/rpa-windows)
+  deprecation(
+</msg>
+</errors>
+</robot>

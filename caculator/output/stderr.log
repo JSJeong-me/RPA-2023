@@ -1,0 +1,3 @@
+[ WARN ] c:\ProgramData\robocorp\ht\cbe51ae_5a1fac3_9fcd2534\lib\site-packages\RPA\Desktop\Windows.py:216: FutureWarning: `RPA.Desktop.Windows` got deprecated and will be no longer maintained, please use `RPA.Windows` instead (https://robocorp.com/docs/libraries/rpa-framework/rpa-windows)
+  deprecation(
+
