@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230305 17:29:51.747" rpa="true" schemaversion="3">
+<suite id="s1" name="Notepad-0305" source="C:\Users\oakyo\Documents\Robots\test21\notepad-0305">
+<suite id="s1-s1" name="Tasks" source="C:\Users\oakyo\Documents\Robots\test21\notepad-0305\tasks.robot">
+<test id="s1-s1-t1" name="Automate Notepad" line="15">
+<kw name="Open Notepad">
+<kw name="Windows Run" library="RPA.Windows">
+<arg>notepad.exe %{FILE_TO_OPEN=${DEFAULT_TEST_FILE}}</arg>
+<tag>window</tag>
+<doc>Use Windows run window to launch application.</doc>
+<msg timestamp="20230305 17:29:57.997" level="INFO">Sending keys '{Win}r' to element &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\cbe51ae_25deba5_756e1d19\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230305 17:29:58.571" level="INFO">Sending keys 'notepad.exe C:\\Users\\oakyo\\Documents\\Robots\\test21\\notepad-0305\\test.txt' to element &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\cbe51ae_25deba5_756e1d19\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230305 17:30:00.201" level="INFO">Sending keys '{Enter}' to element &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\cbe51ae_25deba5_756e1d19\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230305 17:29:57.997" endtime="20230305 17:30:03.752"/>
+</kw>
+<kw name="Control Window" library="RPA.Windows">
+<arg>type:WindowControl class:Notepad</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230305 17:30:04.139" level="INFO">Getting element with locator: type:WindowControl class:Notepad</msg>
+<msg timestamp="20230305 17:30:04.139" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000002BC8A21A8E0&gt;, locator='type:WindowControl class:Notepad', name='데스크톱 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230305 17:30:04.139" level="INFO">Locator 'type:WindowControl class:Notepad' produced matcher: MatchObject(locators=[('ControlType', 'WindowControl', 0), ('ClassName', 'Notepad', 0)], _classes={'notepad'}, max_level=0)</msg>
+<msg timestamp="20230305 17:30:04.380" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<status status="PASS" starttime="20230305 17:30:03.753" endtime="20230305 17:30:04.892"/>
+</kw>
+<status status="PASS" starttime="20230305 17:29:57.996" endtime="20230305 17:30:04.894"/>
+</kw>
+<kw name="Change font settings">
+<kw name="Open font settings">
+<kw name="Click" library="RPA.Windows">
+<arg>type:MenuItemControl name:서식(O)</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230305 17:30:04.902" level="INFO">Getting element with locator: type:MenuItemControl name:서식(O)</msg>
+<msg timestamp="20230305 17:30:04.903" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:04.903" level="INFO">Locator 'type:MenuItemControl name:서식(O)' produced matcher: MatchObject(locators=[('ControlType', 'MenuItemControl', 0), ('Name', '서식(O)', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:04.957" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.MenuItemControl object at 0x000002BC8A468D60&gt;, locator='type:MenuItemControl name:서식(O)', name='서식(O)', automation_id='', control_type='MenuItemControl', class_name='', left=2955, right=3091, top=520, bottom=577, width=136, height=57, xcenter=3023, ycenter=548)</msg>
+<status status="PASS" starttime="20230305 17:30:04.899" endtime="20230305 17:30:05.547"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>type:MenuItemControl name:글꼴(F)...</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230305 17:30:05.551" level="INFO">Getting element with locator: type:MenuItemControl name:글꼴(F)...</msg>
+<msg timestamp="20230305 17:30:05.552" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:05.553" level="INFO">Locator 'type:MenuItemControl name:글꼴(F)...' produced matcher: MatchObject(locators=[('ControlType', 'MenuItemControl', 0), ('Name', '글꼴(F)...', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:05.573" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.MenuItemControl object at 0x000002BC8A536790&gt;, locator='type:MenuItemControl name:글꼴(F)...', name='글꼴(F)...', automation_id='33', control_type='MenuItemControl', class_name='', left=2958, right=3380, top=634, bottom=688, width=422, height=54, xcenter=3169, ycenter=661)</msg>
+<status status="PASS" starttime="20230305 17:30:05.548" endtime="20230305 17:30:06.142"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:04.898" endtime="20230305 17:30:06.143"/>
+</kw>
+<kw name="Set font">
+<kw name="Select" library="RPA.Windows">
+<arg>id:1136</arg>
+<arg>%{NOTEPAD_FONT_NAME=Times New Roman}</arg>
+<tag>action</tag>
+<doc>Select value on Control element if action is supported.</doc>
+<msg timestamp="20230305 17:30:06.147" level="INFO">Getting element with locator: id:1136</msg>
+<msg timestamp="20230305 17:30:06.617" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:06.617" level="INFO">Locator 'id:1136' produced matcher: MatchObject(locators=[('AutomationId', '1136', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:07.745" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ComboBoxControl object at 0x000002BC8A611160&gt;, locator='id:1136', name='글꼴(F):', automation_id='1136', control_type='ComboBoxControl', class_name='ComboBox', left=2832, right=3362, top=701, bottom=1111, width=530, height=410, xcenter=3097, ycenter=906)</msg>
+<status status="PASS" starttime="20230305 17:30:06.145" endtime="20230305 17:30:10.197"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:06.144" endtime="20230305 17:30:10.198"/>
+</kw>
+<kw name="Set font style">
+<kw name="Select" library="RPA.Windows">
+<arg>id:1137</arg>
+<arg>%{NOTEPAD_FONT_STYLE=Regular}</arg>
+<tag>action</tag>
+<doc>Select value on Control element if action is supported.</doc>
+<msg timestamp="20230305 17:30:10.201" level="INFO">Getting element with locator: id:1137</msg>
+<msg timestamp="20230305 17:30:10.202" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:10.202" level="INFO">Locator 'id:1137' produced matcher: MatchObject(locators=[('AutomationId', '1137', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:10.851" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ComboBoxControl object at 0x000002BC8A072700&gt;, locator='id:1137', name='글꼴 스타일(Y):', automation_id='1137', control_type='ComboBoxControl', class_name='ComboBox', left=3410, right=3811, top=701, bottom=1157, width=401, height=456, xcenter=3610, ycenter=929)</msg>
+<msg timestamp="20230305 17:30:14.878" level="INFO">2023-03-05 17:30:14.238 action.py[204] select -&gt; Can't find Regular in ComboBoxControl or it does not support selection.</msg>
+<status status="PASS" starttime="20230305 17:30:10.199" endtime="20230305 17:30:14.878"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:10.198" endtime="20230305 17:30:14.879"/>
+</kw>
+<kw name="Set font size">
+<kw name="Select" library="RPA.Windows">
+<arg>id:1138</arg>
+<arg>%{NOTEPAD_FONT_SIZE=12}</arg>
+<tag>action</tag>
+<doc>Select value on Control element if action is supported.</doc>
+<msg timestamp="20230305 17:30:14.882" level="INFO">Getting element with locator: id:1138</msg>
+<msg timestamp="20230305 17:30:14.883" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:14.883" level="INFO">Locator 'id:1138' produced matcher: MatchObject(locators=[('AutomationId', '1138', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:15.582" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ComboBoxControl object at 0x000002BC8A63CFA0&gt;, locator='id:1138', name='크기(S):', automation_id='1138', control_type='ComboBoxControl', class_name='ComboBox', left=3864, right=4058, top=701, bottom=1111, width=194, height=410, xcenter=3961, ycenter=906)</msg>
+<status status="PASS" starttime="20230305 17:30:14.880" endtime="20230305 17:30:17.322"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:14.880" endtime="20230305 17:30:17.323"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>id:1</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230305 17:30:17.326" level="INFO">Getting element with locator: id:1</msg>
+<msg timestamp="20230305 17:30:17.327" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:17.327" level="INFO">Locator 'id:1' produced matcher: MatchObject(locators=[('AutomationId', '1', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:18.132" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ButtonControl object at 0x000002BC8A388F40&gt;, locator='id:1', name='확인', automation_id='1', control_type='ButtonControl', class_name='Button', left=3554, right=3796, top=1896, bottom=1980, width=242, height=84, xcenter=3675, ycenter=1938)</msg>
+<status status="PASS" starttime="20230305 17:30:17.324" endtime="20230305 17:30:18.734"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:04.895" endtime="20230305 17:30:18.735"/>
+</kw>
+<kw name="Write text to editor">
+<arg>{CTRL}a{CLEAR}</arg>
+<kw name="Send Keys" library="RPA.Windows">
+<arg>id:15</arg>
+<arg>${text}</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<msg timestamp="20230305 17:30:18.738" level="INFO">Getting element with locator: id:15</msg>
+<msg timestamp="20230305 17:30:18.739" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:18.739" level="INFO">Locator 'id:15' produced matcher: MatchObject(locators=[('AutomationId', '15', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:18.746" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.EditControl object at 0x000002BC8A644130&gt;, locator='id:15', name='텍스트 편집', automation_id='15', control_type='EditControl', class_name='Edit', left=2703, right=5469, top=578, bottom=2057, width=2766, height=1479, xcenter=4086, ycenter=1317)</msg>
+<msg timestamp="20230305 17:30:18.746" level="INFO">Sending keys '{CTRL}a{CLEAR}' to element &lt;uiautomation.uiautomation.EditControl object at 0x000002BC8A644130&gt;</msg>
+<status status="PASS" starttime="20230305 17:30:18.736" endtime="20230305 17:30:19.354"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:18.735" endtime="20230305 17:30:19.355"/>
+</kw>
+<kw name="Write text to editor">
+<arg>Timestamp: ${{ datetime.datetime.now() }}</arg>
+<kw name="Send Keys" library="RPA.Windows">
+<arg>id:15</arg>
+<arg>${text}</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<msg timestamp="20230305 17:30:19.359" level="INFO">Getting element with locator: id:15</msg>
+<msg timestamp="20230305 17:30:19.360" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BC8A072910&gt;, locator='type:WindowControl class:Notepad', name='test.txt - Windows 메모장', automation_id='', control_type='WindowControl', class_name='Notepad', left=2685, right=5487, top=435, bottom=2139, width=2802, height=1704, xcenter=4086, ycenter=1287)</msg>
+<msg timestamp="20230305 17:30:19.360" level="INFO">Locator 'id:15' produced matcher: MatchObject(locators=[('AutomationId', '15', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230305 17:30:19.369" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.EditControl object at 0x000002BC8A540940&gt;, locator='id:15', name='텍스트 편집', automation_id='15', control_type='EditControl', class_name='Edit', left=2703, right=5469, top=578, bottom=2057, width=2766, height=1479, xcenter=4086, ycenter=1317)</msg>
+<msg timestamp="20230305 17:30:19.370" level="INFO">Sending keys 'Timestamp: 2023-03-05 17:30:19.356297' to element &lt;uiautomation.uiautomation.EditControl object at 0x000002BC8A540940&gt;</msg>
+<status status="PASS" starttime="20230305 17:30:19.357" endtime="20230305 17:30:20.458"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:19.355" endtime="20230305 17:30:20.458"/>
+</kw>
+<kw name="Save">
+<kw name="Send Keys" library="RPA.Windows">
+<arg>keys={CTRL}s</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<msg timestamp="20230305 17:30:20.460" level="INFO">Sending keys '{CTRL}s' to element &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\cbe51ae_25deba5_756e1d19\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230305 17:30:20.459" endtime="20230305 17:30:21.029"/>
+</kw>
+<status status="PASS" starttime="20230305 17:30:20.459" endtime="20230305 17:30:21.031"/>
+</kw>
+<kw name="Close Current Window" library="RPA.Windows" type="TEARDOWN">
+<tag>window</tag>
+<doc>Closes current active window or logs a warning message.</doc>
+<msg timestamp="20230305 17:30:21.035" level="INFO">Closing window with name: test.txt - Windows 메모장 (PID: 5384)</msg>
+<status status="PASS" starttime="20230305 17:30:21.032" endtime="20230305 17:30:21.043"/>
+</kw>
+<status status="PASS" starttime="20230305 17:29:57.995" endtime="20230305 17:30:21.043"/>
+</test>
+<doc>Automate Notepad.
+Expects Windows 10, English.</doc>
+<status status="PASS" starttime="20230305 17:29:51.849" endtime="20230305 17:30:21.047"/>
+</suite>
+<status status="PASS" starttime="20230305 17:29:51.816" endtime="20230305 17:30:21.050"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Notepad-0305">Notepad-0305</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tasks">Notepad-0305.Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

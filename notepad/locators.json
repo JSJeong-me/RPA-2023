@@ -1,0 +1,9 @@
+{
+    "Jsdownloadhero": {
+        "screenshot": ".images\\jsdownloadhero-screenshot.png",
+        "source": "https://www.google.com/chrome/",
+        "strategy": "id",
+        "type": "browser",
+        "value": "js-download-hero"
+    }
+}
