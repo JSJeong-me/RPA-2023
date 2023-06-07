@@ -5,4 +5,4 @@ Robot Framework & RPA Framework 교안
 ### Work Sheet		https://han.gl/PxXMvf
 
 
-### 수업 일지   https://han.gl/AyWnxf
+### 수업 일지   https://han.gl/biHjDX
